@@ -43,6 +43,7 @@ int specifier_identifier(char specifier, va_list ap)
 
 	else
 	{
+		count += write(1, '%', 1);
 		count += write(1, &specifier, 1);
 	}
 

@@ -41,10 +41,6 @@ int specifier_identifier(char specifier, va_list ap)
 		count = print_digit((long)va_arg(ap, unsigned int), 16);
 	}
 
-	else if (specifier == 'o')
-	{
-		count = int print_octal((long)va_arg(ap, unsigned int));
-
 	else
 	{
 		count += write(1, &specifier, 1);

@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 	{
 		if (*++format == '%')
 		{
-			count += write(1, '%', 1);
+			count += _purchar('%');
 			continue;
 		}
 

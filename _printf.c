@@ -30,14 +30,14 @@ int _printf(const char *format, ...)
 
 	while (*format)
 	{
-		if (*++format == '%')
-		{
-			count += _purchar('%');
-			continue;
-		}
-
 		if (*format == '%')
 		{
+			if (*++format == '%')
+                	{
+                        	count += _purchar('%');
+                        	continue;
+                	}
+
 			count += specifier_identifier(*++format, ap);
 		}
 		else

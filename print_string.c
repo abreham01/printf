@@ -4,11 +4,11 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-/*
+/**
  * print_string - Prints string
  * @str: pointer to string
  *
- * Return: number of chars printed 
+ * Return: number of chars printed
  */
 
 int print_string(char *str)
@@ -20,5 +20,5 @@ int print_string(char *str)
 		count += write(1, str++, 1);
 	}
 
-	return count;
+	return (count);
 }

@@ -4,9 +4,10 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-/*
+/**
  * specifier_identifier - identifies which conversion specifier is provided
- * @specifier: 
+ * @specifier: flag
+ * @ap: pointer
  *
  * Return: number of characters printed
  */
@@ -31,9 +32,9 @@ int specifier_identifier(char specifier, va_list ap)
 	}
 
 	else if (specifier == 'b')
-        {
-                count = print_digit((long)va_arg(ap, unsigned int), 2);
-        }
+	{
+		count = print_digit((long)va_arg(ap, unsigned int), 2);
+	}
 
 	else if (specifier == 'x')
 	{
@@ -45,8 +46,5 @@ int specifier_identifier(char specifier, va_list ap)
 		count += write(1, &specifier, 1);
 	}
 
-	return count;
+	return (count);
 }
-
-
-				

@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-/*
+/**
  * _printf - Prints like a printf
  * @format: format specifier
  *
@@ -35,5 +35,5 @@ int _printf(const char *format, ...)
 
 	va_end(ap);
 
-	return count;
+	return (count);
 }

@@ -32,12 +32,6 @@ int _printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			if (*++format == '%')
-                	{
-                        	count += _putchar('%');
-                        	continue;
-                	}
-
 			count += specifier_identifier(*++format, ap);
 		}
 		else
